@@ -8,16 +8,25 @@ namespace LemonadeStand
 {
    public class Store
     {
-        double paperCups;
-        double plasticCups;
-        double drinkCooler;
-        double frozenLemonade;
-        double powderedLemonade;
-        double freshLemons;
-        double sugar;
-        double purifiedWater;
-        double ice;
+        double paper25CupsPrice= 0.50;
+        double foam25CupsPrice= 0.75;
+        double drinkCoolerPrice= 20.00;
+        double frozenLemonadePrice= 1.00;
+        double powderedLemonadePrice = 1.00;
+        double freshLemonsPrice=0.25;
+        double sugarCupsPrice=0.50;
+        double purifiedWaterPrice=1.00;
+        double icePrice= 0.03;
+        public Store()
+        {
 
+        }
+
+        public void StoreFront()
+        {
+
+
+        }
 
 
 

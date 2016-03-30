@@ -8,10 +8,49 @@ namespace LemonadeStand
 {
     public class Bank
     {
-        public double bankGross;
+        public double bankBalance;
         public double bankNet;
-        public double bankprofit;
-        public double bankexpense;
+        public double lemonProfit;
+        public double lemonLoss;
+
+
+
+
+       public double getBankBalance()
+        {
+            return bankBalance;
+        }
+
+        public double getLemonProfit()
+        {
+            return bankBalance += lemonProfit;
+        }
+
+        public bool getLemonLoss(double lemonLoss)
+        {
+            if (bankBalance < lemonLoss)
+            {
+                Console.WriteLine("You are Bankrupt!"); 
+                return false; 
+            
+
+            }
+
+            else
+            {
+                bankBalance -= lemonLoss;
+                return true;
+            }
+
+        }
+
+
+        public void showBankBalance()
+        {
+            Console.WriteLine("Bank Balance: {0:C}",getBankBalance());
+
+        }
+       
         
 
     }

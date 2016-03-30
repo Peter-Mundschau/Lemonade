@@ -7,29 +7,46 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-   public class Temperature
+    public class Temperature
     {
-        public Temperature() { }
-
-        public void getTemperature()
+        public int getTempRange;
+        public int temperature;
+        
+        public int temperatureChange;
+        public Temperature()
         {
-            for (int i = 0; i < 20; i++)
+            
+        }
+        public void getRandomTempRange()
+        {
+            
             {
+                Random tempRange = new Random();
+                getTempRange = tempRange.Next(55, 98);
 
-            RandomGen T100 = new RandomGen();
-            T100.Percent();
-
-            Console.WriteLine(T100.oneHundred);
                 Thread.Sleep(20);
+                
             }
+
 
         }
 
-
-
-
-
-
+        public  void HigherOrLower()
+        {
+            Random rand = new Random();
+            temperatureChange = rand.Next(0, 2);
+            if (temperatureChange==1)
+            {
+                getTempRange += 5;
+                temperature = getTempRange;
+            }
+            else
+            {
+                getTempRange -= 10;
+                temperature = getTempRange;
+            }
+        }
+            
 
 
     }

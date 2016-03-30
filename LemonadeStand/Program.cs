@@ -10,9 +10,14 @@ namespace LemonadeStand
     {
         static void Main(string[] args)
         {
+            Customer GetCustomers = new Customer();
+            GetCustomers.GenerateCustomers();
 
-            Temperature getTemperatureCondition = new Temperature();
-            getTemperatureCondition.getTemperature();
+
+            Temperature GetRandomTemperature = new Temperature();
+            GetRandomTemperature.getRandomTempRange();
+            
+
 
         }
     }

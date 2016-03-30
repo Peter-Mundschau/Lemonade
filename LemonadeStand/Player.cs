@@ -8,5 +8,21 @@ namespace LemonadeStand
 {
     public class Player
     {
+        public Player()
+        {
+
+        }
+        public string playerName;
+        public double bankBalance = 20.00;
+        
+
+
+        public void PlayerName()
+        {
+            Console.WriteLine("Please Enter your Name: ");
+            playerName = Console.ReadLine();
+
+        }
+
     }
 }
