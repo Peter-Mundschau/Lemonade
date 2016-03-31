@@ -8,16 +8,36 @@ namespace LemonadeStand
 {
     public class Inventory
     {
+        public Inventory()
+        {
 
-        int paper25Cups = 0;
-        int plastic25Cups = 0;
-        int drinkCooler = 0;
-        int frozenLemonade = 0;
-        int powderedLemonade = 0;
-        int freshLemons = 0;
-        int sugarCups = 0;
-        int purifiedWater = 0;
-        int ice = 0;
+
+        }
+
+        public int paperCupsOnHand = 0;
+        public int freshLemonsOnHand = 0;
+        public int sugarCupsOnHand = 0;
+        public int iceOnHand = 0;
+        public List<int> OnHandIventory = new List<int>();
+
+
+
+        public void StartingInventory()
+        {
+            OnHandIventory.Add(paperCupsOnHand);
+            OnHandIventory.Add(freshLemonsOnHand);
+            OnHandIventory.Add(sugarCupsOnHand);
+            OnHandIventory.Add(iceOnHand);
+        }
+
+
+        public void AdjustInventoryDown()
+        {
+            
+            
+        }
+
+
 
     }
 }

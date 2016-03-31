@@ -20,7 +20,7 @@ namespace LemonadeStand
         public int sunnyHumid4 = 4;
         public string sunnyHumid = "Sunny and Humid";
         public int typeOfWeather;
-        public int weatherValue;
+        public string weatherValue;
 
         public Weather()
         {
@@ -36,35 +36,35 @@ namespace LemonadeStand
             typeOfWeather = TypeOfWeather.Next(1, 4);
             }
             Thread.Sleep(20);
-            return;
+            
 
             if (true)
             {
                 typeOfWeather = 1;
                 Console.WriteLine(rain);
-                weatherValue = 1;
+                weatherValue = "Rain";
 
             }
             else if (true)
             {
                 typeOfWeather = 2;
                 Console.WriteLine(cloudy);
-                weatherValue = 2;
+                weatherValue = "Cloudy";
             }
             else if (true)
             {
                 typeOfWeather = 3;
                 Console.WriteLine(sunny);
-                weatherValue = 3;
+                weatherValue = "Sunny";
             }
             else
             {
                 typeOfWeather = 4;
                 Console.WriteLine(sunnyHumid);
-                weatherValue = 4;
+                weatherValue = "Sunny and Humid";
             }
 
-
+            return;
         }
 
 

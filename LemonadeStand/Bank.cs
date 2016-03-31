@@ -8,25 +8,25 @@ namespace LemonadeStand
 {
     public class Bank
     {
-        public double bankBalance;
-        public double bankNet;
-        public double lemonProfit;
-        public double lemonLoss;
+        public decimal bankBalance;
+        public decimal bankNet;
+        public decimal lemonProfit;
+        public decimal lemonLoss;
 
 
 
 
-       public double getBankBalance()
+       public decimal getBankBalance()
         {
             return bankBalance;
         }
 
-        public double getLemonProfit()
+        public decimal getLemonProfit()
         {
             return bankBalance += lemonProfit;
         }
 
-        public bool getLemonLoss(double lemonLoss)
+        public bool getLemonLoss(decimal lemonLoss)
         {
             if (bankBalance < lemonLoss)
             {

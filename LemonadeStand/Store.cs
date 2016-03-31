@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-   public class Store
+    public class Store
     {
-        double paper25CupsPrice= 0.50;
-        double foam25CupsPrice= 0.75;
-        double drinkCoolerPrice= 20.00;
-        double frozenLemonadePrice= 1.00;
-        double powderedLemonadePrice = 1.00;
-        double freshLemonsPrice=0.25;
-        double sugarCupsPrice=0.50;
-        double purifiedWaterPrice=1.00;
-        double icePrice= 0.03;
+        double paper25CupsPrice = 0.50;
+        double freshLemonsPrice = 0.25;
+        double sugarCupsPrice = 0.50;
+        double icePrice = 0.03;
+
+        int paper25Cups = 0;
+        int freshLemons = 0;
+        int sugarCups = 0;
+        int ice = 0;
+
         public Store()
         {
 
@@ -26,7 +27,10 @@ namespace LemonadeStand
         {
 
 
+
+
         }
+
 
 
 
