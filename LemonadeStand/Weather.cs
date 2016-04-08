@@ -29,44 +29,48 @@ namespace LemonadeStand
             
         }
 
-        public void GetTypeOfWeather()
+        public int GetTypeOfWeather()
         {
             
 
             { 
             Random TypeOfWeather = new Random();
-            typeOfWeather = TypeOfWeather.Next(1, 4);
+            typeOfWeather = TypeOfWeather.Next(1, 5);
             }
             Thread.Sleep(20);
             
 
-            if (true)
+            if (typeOfWeather == 1 )
             {
                 typeOfWeather = 1;
                 Console.WriteLine(rain);
                 weatherValue = "Rain";
+                return typeOfWeather;
 
             }
-            else if (true)
+            else if (typeOfWeather == 2)
             {
                 typeOfWeather = 2;
                 Console.WriteLine(cloudy);
                 weatherValue = "Cloudy";
+                return typeOfWeather;
             }
-            else if (true)
+            else if (typeOfWeather == 3)
             {
                 typeOfWeather = 3;
                 Console.WriteLine(sunny);
                 weatherValue = "Sunny";
+                return typeOfWeather;
             }
             else
             {
                 typeOfWeather = 4;
                 Console.WriteLine(sunnyHumid);
                 weatherValue = "Sunny and Humid";
+                return typeOfWeather;
             }
 
-            return;
+           
         }
 
 
@@ -75,7 +79,7 @@ namespace LemonadeStand
 
             {
                 Random tempRange = new Random();
-                getTempRange = tempRange.Next(55, 98);
+                getTempRange = tempRange.Next(60, 99);
 
                 Thread.Sleep(20);
 

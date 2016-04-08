@@ -17,16 +17,19 @@ namespace LemonadeStand
             //Weather GetRandomTemperature = new Weather();
             // GetRandomTemperature.getRandomTempRange();
 
-            // Day GetTheForecast = new Day();
-            // GetTheForecast.DailyForeCast();
-            // GetTheForecast.AdjustedTemperature();
+            Day GetTheForecast = new Day();
+            GetTheForecast.DailyForeCast();
+            GetTheForecast.AdjustedTemperature();
 
 
-           UserInterface  printInventory = new UserInterface();
+            UserInterface  printInventory = new UserInterface();
             printInventory.BuyInventory();
 
             Player bankBalance = new Player();
             bankBalance.getBankBalance();
+
+            Inventory startingInventory = new Inventory();
+            startingInventory.StartingInventory();
             
             
             

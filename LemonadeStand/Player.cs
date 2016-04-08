@@ -9,13 +9,13 @@ namespace LemonadeStand
     public class Player 
     {
         public string playerName;
-        
 
+        Inventory playerInventory;
         Bank bank;
         public Player()
         {
             bank = new Bank();
-
+            playerInventory = new Inventory();
         }
 
 

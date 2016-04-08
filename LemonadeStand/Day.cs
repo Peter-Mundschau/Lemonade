@@ -8,14 +8,17 @@ namespace LemonadeStand
 {
     public class Day
     {
-        public Temperature getTemperature;
+       // public Temperature getTemperature;
         public Weather getWeather;
         public int day = 0;
+        Customer getCustomers;
 
         public Day()
         {
             getWeather = new Weather();
-            getTemperature = new Temperature();
+          //  getTemperature = new Temperature();
+            getCustomers = new Customer();
+
         }
         
         public void EndOfDay()

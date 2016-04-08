@@ -30,7 +30,7 @@ namespace LemonadeStand
             OnHandIventory.Add(iceOnHand);
             foreach (int inventoryitem in OnHandIventory)
             {
-                
+                Console.WriteLine(OnHandIventory);
             }
         }
 
