@@ -8,25 +8,25 @@ namespace LemonadeStand
 {
     public class Bank
     {
-        public decimal bankBalance;
+        
         public decimal bankNet;
         public decimal lemonProfit;
         public decimal lemonLoss;
+        public decimal bankBalance = 20.00M;
 
 
 
-
-       public decimal getBankBalance()
+        public decimal BankBalance()
         {
             return bankBalance;
         }
 
-        public decimal getLemonProfit()
+        public decimal LemonProfit()
         {
             return bankBalance += lemonProfit;
         }
 
-        public bool getLemonLoss(decimal lemonLoss)
+        public bool LemonLoss(decimal lemonLoss)
         {
             if (bankBalance < lemonLoss)
             {
@@ -47,7 +47,7 @@ namespace LemonadeStand
 
         public void showBankBalance()
         {
-            Console.WriteLine("Bank Balance: {0:C}",getBankBalance());
+            Console.WriteLine("Bank Balance: {0:C}",BankBalance());
 
         }
        

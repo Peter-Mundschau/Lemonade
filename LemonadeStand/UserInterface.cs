@@ -80,7 +80,7 @@ namespace LemonadeStand
 
             if (userInput.ToUpper()=="Y")
             {
-                getInventory.AdjustInventoryDown();
+               AdjustInventoryDown();
                // SetPricePerCup();
             }
             else
@@ -93,11 +93,25 @@ namespace LemonadeStand
 
         public void BuyInventory()
         {
+            Console.WriteLine("Here is your current Inventory;\n");
+            Console.WriteLine("Paper Cups;\t"+getInventory.paperCupsOnHand);
+            Console.WriteLine("Lemons;\t\t"+getInventory.freshLemonsOnHand);
+            Console.WriteLine("Cups of Sugar;\t" +getInventory.sugarCupsOnHand);
+            Console.WriteLine("Ice Cubes;\t"+getInventory.iceOnHand);
+            Console.WriteLine();
+
+            
+        }
+
+        public void AdjustInventoryDown()
+        {
+            getInventory.paperCupsOnHand -= numCups;
+            getInventory.freshLemonsOnHand -= numLemons;
+            getInventory.sugarCupsOnHand -= numCupSugar;
+            getInventory.iceOnHand -= numIce;
 
 
         }
-
-
     }
 
 }

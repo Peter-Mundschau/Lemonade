@@ -27,18 +27,18 @@ namespace LemonadeStand
         public void DailyForeCast()
         {
             getWeather.GetTypeOfWeather();
-            getTemperature.getRandomTempRange();
+            getWeather.getRandomTempRange();
 
             Console.WriteLine("The ForeCast for today is ..."+ 
-                getWeather +"and " + getTemperature +"degrees");
+                getWeather.weatherValue +" and " + getWeather.getTempRange +"degrees");
 
         }
 
         public void AdjustedTemperature()
         {
-            getTemperature.HigherOrLower();
-            Console.WriteLine("The ForeCast for today is still" +
-               getWeather + "but it will be " + getTemperature + "degrees");
+            getWeather.HigherOrLower();
+            Console.WriteLine("The ForeCast for today is still " +
+               getWeather.weatherValue + " but it will be " + getWeather.temperature + "degrees");
 
         }
 

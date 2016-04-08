@@ -6,15 +6,27 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    public class Player
+    public class Player 
     {
+        public string playerName;
+        
+
+        Bank bank;
         public Player()
         {
+            bank = new Bank();
 
         }
-        public string playerName;
-        public double bankBalance = 20.00;
+
+
+
+       public void getBankBalance()
+        {
+            bank.showBankBalance();
+                
+        }
         
+         
 
 
         public void PlayerName()

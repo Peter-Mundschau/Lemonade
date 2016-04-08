@@ -28,14 +28,18 @@ namespace LemonadeStand
             OnHandIventory.Add(freshLemonsOnHand);
             OnHandIventory.Add(sugarCupsOnHand);
             OnHandIventory.Add(iceOnHand);
+            foreach (int inventoryitem in OnHandIventory)
+            {
+                
+            }
         }
 
 
-        public void AdjustInventoryDown()
-        {
-            
-            
-        }
+        //public void AdjustInventoryDown()
+        //{
+          
+
+        //}
 
 
 

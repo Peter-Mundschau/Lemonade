@@ -21,6 +21,8 @@ namespace LemonadeStand
         public string sunnyHumid = "Sunny and Humid";
         public int typeOfWeather;
         public string weatherValue;
+        public int getTempRange;
+        public int temperatureChange;
 
         public Weather()
         {
@@ -68,19 +70,35 @@ namespace LemonadeStand
         }
 
 
+        public void getRandomTempRange()
+        {
+
+            {
+                Random tempRange = new Random();
+                getTempRange = tempRange.Next(55, 98);
+
+                Thread.Sleep(20);
+
+            }
 
 
+        }
 
-
-
-
-
-
-
-
-
-
-
+        public void HigherOrLower()
+        {
+            Random rand = new Random();
+            temperatureChange = rand.Next(0, 2);
+            if (temperatureChange == 1)
+            {
+                getTempRange += 5;
+                temperature = getTempRange;
+            }
+            else
+            {
+                getTempRange -= 10;
+                temperature = getTempRange;
+            }
+        }
 
 
 
