@@ -11,8 +11,9 @@ namespace LemonadeStand
         public Inventory()
         {
 
-
         }
+
+
 
         public int paperCupsOnHand = 0;
         public int freshLemonsOnHand = 0;
@@ -30,18 +31,18 @@ namespace LemonadeStand
             OnHandIventory.Add(iceOnHand);
             foreach (int inventoryitem in OnHandIventory)
             {
-                Console.WriteLine(OnHandIventory);
+                Console.WriteLine(inventoryitem);
             }
         }
 
 
         //public void AdjustInventoryDown()
         //{
-          
+
 
         //}
 
 
-
+    
     }
 }

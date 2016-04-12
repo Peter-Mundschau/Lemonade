@@ -9,9 +9,11 @@ namespace LemonadeStand
     public class Player 
     {
         public string playerName;
+        public decimal userInput;
+        public decimal setPricePerCup;
 
-        Inventory playerInventory;
-        Bank bank;
+        public Inventory playerInventory;
+        public Bank bank;
         public Player()
         {
             bank = new Bank();
@@ -33,6 +35,16 @@ namespace LemonadeStand
         {
             Console.WriteLine("Please Enter your Name: ");
             playerName = Console.ReadLine();
+
+        }
+
+        public void SetPricePerCup()
+        {
+            
+            Console.WriteLine("Enter today's Sale price per cup;\n");
+            userInput = Convert.ToDecimal(Console.ReadLine());
+
+            setPricePerCup = userInput;
 
         }
 

@@ -8,7 +8,9 @@ namespace LemonadeStand
 {
     public class UserInterface
     {
-        public Inventory getInventory;
+        //public Inventory getInventory;
+        public Player player;
+        public Store store;
         public int numLemons;
         public int numCupSugar;
         public int numIce;
@@ -18,7 +20,10 @@ namespace LemonadeStand
 
         public UserInterface()
         {
-            getInventory = new Inventory();
+            //getInventory = new Inventory();
+            player = new Player();
+            store = new Store();
+            
         }
 
         public void MakeLemonade()
@@ -81,7 +86,8 @@ namespace LemonadeStand
             if (userInput.ToUpper()=="Y")
             {
                AdjustInventoryDown();
-               // SetPricePerCup();
+               
+                player.SetPricePerCup();
             }
             else
             {
@@ -93,25 +99,80 @@ namespace LemonadeStand
 
         public void BuyInventory()
         {
+            bool buyInventory = true;
             Console.WriteLine("Here is your current Inventory;\n");
-            Console.WriteLine("Paper Cups;\t"+getInventory.paperCupsOnHand);
-            Console.WriteLine("Lemons;\t\t"+getInventory.freshLemonsOnHand);
-            Console.WriteLine("Cups of Sugar;\t" +getInventory.sugarCupsOnHand);
-            Console.WriteLine("Ice Cubes;\t"+getInventory.iceOnHand);
+            Console.WriteLine("Paper Cups;\t"+player.playerInventory.paperCupsOnHand);
+            Console.WriteLine("Lemons;\t\t"+player.playerInventory.freshLemonsOnHand);
+            Console.WriteLine("Cups of Sugar;\t" +player.playerInventory.sugarCupsOnHand);
+            Console.WriteLine("Ice Cubes;\t"+player.playerInventory.iceOnHand);
             Console.WriteLine();
+            Console.WriteLine("What would you like to buy?(Enter 1 - 5)\n1.\t PaperCups:\n2.\tLemons:\n3.\tSugar:\n4.\tIce:\n5.\tExit Store:");
+            while (buyInventory == true)
+            {
+                userInput = Console.ReadLine();
+                string [] s =  { null, "1","2","3","4","5"};
+                foreach (var input in s)
+                {
+                    int choice;
+                    bool inputResult = Int32.TryParse(input, out choice);
+                    if (choice == 1)
+                    {
+                        store.BuyPaperCups();
+                      
+                    }
+                    else if (choice == 2)
+                    {
+                        store.BuyLemons();
+                        
+                    }
+                    else if (choice==3)
+                    {
+                        store.BuySugar();
+                        
+                    }
+                    else if (choice==4)
+                    {
+                        store.BuyIceCubes();
+                        
+                    }
+                    else if (choice ==5)
+                    {
+                        buyInventory = false;
+                        WhatNext();
+                        
+
+                    }
+                    else 
+                    {
+                        
+                        Console.WriteLine("Not a Valid Choice\n");
+                        Console.WriteLine("What would you like to buy?(Enter 1 - 5)\n1.\t PaperCups:\n2.\tLemons:\n3.\tSugar:\n4.\tIce:\n5.\tExit Store:");
+                        
+                    }
+                }
+                
+               // userInput = Console.ReadLine(int.TryParse(userInput, out choice));
+                
+                
+            }
 
             
         }
 
         public void AdjustInventoryDown()
         {
-            getInventory.paperCupsOnHand -= numCups;
-            getInventory.freshLemonsOnHand -= numLemons;
-            getInventory.sugarCupsOnHand -= numCupSugar;
-            getInventory.iceOnHand -= numIce;
+            player.playerInventory.paperCupsOnHand -= numCups;
+            player.playerInventory.freshLemonsOnHand -= numLemons;
+            player.playerInventory.sugarCupsOnHand -= numCupSugar;
+            player.playerInventory.iceOnHand -= numIce;
 
 
         }
+        public void WhatNext()
+        {
+
+        }
+
     }
 
 }

@@ -36,11 +36,11 @@ namespace LemonadeStand
                 
             }
 
-            Console.WriteLine(customers.Count);
-            foreach (var item in customers)
-            {
-                Console.WriteLine(item);
-            }
+            //Console.WriteLine(customers.Count);   // No need to print customer moods
+            //foreach (var item in customers)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
             //Console.WriteLine(customers.Count+" "+customers.);
 

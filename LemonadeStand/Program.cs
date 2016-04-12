@@ -10,30 +10,30 @@ namespace LemonadeStand
     {
         static void Main(string[] args)
         {
-            // Customer GetCustomers = new Customer();
-            // GetCustomers.GenerateCustomers();
+            //Customer GetCustomers = new Customer();
+            //GetCustomers.GenerateCustomers();
 
 
             //Weather GetRandomTemperature = new Weather();
-            // GetRandomTemperature.getRandomTempRange();
+            //GetRandomTemperature.getRandomTempRange();
 
-            Day GetTheForecast = new Day();
-            GetTheForecast.DailyForeCast();
-            GetTheForecast.AdjustedTemperature();
+            //Day GetTheForecast = new Day();
+            //GetTheForecast.DailyForeCast();
+            //GetTheForecast.AdjustedTemperature();
 
 
-            UserInterface  printInventory = new UserInterface();
+            UserInterface printInventory = new UserInterface();
             printInventory.BuyInventory();
 
-            Player bankBalance = new Player();
-            bankBalance.getBankBalance();
+            //Player bankBalance = new Player();
+            //bankBalance.getBankBalance();
 
-            Inventory startingInventory = new Inventory();
-            startingInventory.StartingInventory();
-            
-            
-            
-               
+            //Inventory startingInventory = new Inventory();
+            //startingInventory.StartingInventory();
+
+
+
+
 
 
         }

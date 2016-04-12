@@ -8,29 +8,44 @@ namespace LemonadeStand
 {
     public class Store
     {
-        double paper25CupsPrice = 0.50;
-        double freshLemonsPrice = 0.25;
-        double sugarCupsPrice = 0.50;
-        double icePrice = 0.03;
+        public double paper25CupsPrice = 0.50;
+        public double freshLemonsPrice = 0.25;
+        public double sugarCupsPrice = 0.50;
+        public double icePrice = 0.03;
 
-        int paper25Cups = 0;
-        int freshLemons = 0;
-        int sugarCups = 0;
-        int ice = 0;
+        public int paper25Cups = 25;
+        public int freshLemons = 1;
+        public int sugarCups = 1;
+        public int ice = 10;
+        public int userInput;
 
         public Store()
         {
-
+            
         }
 
-        public void StoreFront()
+ 
+
+        public void BuyPaperCups()
+        {
+            Console.Write("Paper Cups 25 for $0.30\nHow many Packs of 25?>\n" );
+            userInput = Convert.ToInt32(Console.ReadLine());
+
+        }
+        public void BuyLemons()
         {
 
+        }
 
-
+        public void BuySugar()
+        {
 
         }
 
+        public void BuyIceCubes()
+        {
+
+        }
 
 
 
