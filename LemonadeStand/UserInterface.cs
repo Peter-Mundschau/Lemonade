@@ -114,7 +114,7 @@ namespace LemonadeStand
                 foreach (var input in s)
                 {
                     int choice;
-                    bool inputResult = Int32.TryParse(input, out choice);
+                    bool inputResult = int.TryParse(input, out choice);
                     if (choice == 1)
                     {
                         store.BuyPaperCups();
